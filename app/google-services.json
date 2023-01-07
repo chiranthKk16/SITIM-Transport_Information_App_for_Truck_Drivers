@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "22985188766",
+    "project_id": "sitim-facfa",
+    "storage_bucket": "sitim-facfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22985188766:android:6231c1a926fec0259b628f",
+        "android_client_info": {
+          "package_name": "com.example.sitim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22985188766-ce5gkb9ljft91s8lu3ct8odcj6ddg0uu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANVmyTOiJauLdaF2hXlLrt_Mjo4tbUNq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22985188766-ce5gkb9ljft91s8lu3ct8odcj6ddg0uu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

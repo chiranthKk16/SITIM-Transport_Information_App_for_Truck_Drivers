@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Assigned,"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/vehicle_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hi"
+        android:fontFamily="@font/fredoka_one"
+        android:layout_marginLeft="20dp"
+        android:textSize="30sp"
+        />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/vehicle_plate"
+        android:layout_marginTop="20dp"
+        android:background="#e0e0e0"/>
+
+    <RelativeLayout
+        android:id="@+id/update_loc_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vehicle_plate"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        android:background="#e0e0e0"
+        android:paddingTop="10dp"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cornerRadius="20dp"
+            app:backgroundTint="#795548"
+            android:text="Update"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/update_button"
+            android:text="Update your current location. Last updated 1 hour ago"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update_loc_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/your_destination_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your destination"
+            android:drawableLeft="@drawable/ic_location"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/fredoka_one"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/destination_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/your_destination_text"
+            android:layout_marginLeft="40dp"
+            />
+
+
+        <TextView
+            android:id="@+id/click_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/destination_address"
+            android:layout_marginTop="10dp"
+            android:text="Click below to veiw on Google Maps:"
+            android:layout_marginLeft="40dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/mapView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_border"
+            app:srcCompat="@drawable/dest_maps"
+
+            android:layout_below="@id/click_google"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/employer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_main"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/emp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employer Details"
+            android:textSize="20sp"
+            android:fontFamily="@font/fredoka_one"
+            android:drawableLeft="@drawable/ic_employer"
+            android:drawablePadding="10dp"/>
+
+        <TextView
+            android:id="@+id/employer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emp_text"
+            android:layout_marginLeft="40dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/employer_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/employer_name"
+
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:id="@+id/employer_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/employer_phone"
+            android:layout_marginLeft="40dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/products_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/employer_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/products_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Products carrying"
+            android:textSize="20sp"
+            android:fontFamily="@font/fredoka_one"
+            android:drawableLeft="@drawable/ic_products"
+            android:drawablePadding="10dp"/>
+
+        <TextView
+            android:id="@+id/prod_qty_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/products_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="Quantity"/>
+
+        <TextView
+            android:id="@+id/prod_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/products_text"
+            android:layout_marginLeft="40dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="Product name"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/products_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@id/prod_heading"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cross_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/products_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/cross_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:fontFamily="@font/fredoka_one"
+            android:text="Cross Docking products"
+            android:drawableLeft="@drawable/ic_cross"
+            android:drawablePadding="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cross_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@id/cross_text"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/finish_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/cross_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/finish_job" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Finish job"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:fontFamily="@font/fredoka_one"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+</ScrollView>
